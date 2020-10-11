@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- menu top -->
+    <div class="fixed-top-menu">
+        <input id="searchPerson" type="text" placeholder="Search">
+
+        <div class="menu-icon">
+            <svg class="noti-icon " id="Capa_1" enable-background="new 0 0 443.295 443.295" height="512"
+                viewBox="0 0 443.295 443.295" width="512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m367.117 319.43c-4.613-11.499-6.94-23.62-6.94-36.012v-89.476c0-62.068-41.31-114.116-97.677-131.676-3.35-19.579-20.331-34.56-40.852-34.56s-37.502 14.981-40.852 34.56c-56.367 17.56-97.677 69.608-97.677 131.676v89.476c0 12.392-2.327 24.513-6.94 36.012l-19.779 49.459c-1.705 4.275-1.177 9.091 1.393 12.906 2.584 3.815 6.872 6.088 11.472 6.088h105.306c9.822 16.694 27.341 27.706 47.077 27.706s37.255-11.012 47.077-27.706h105.305c4.6 0 8.888-2.273 11.472-6.088 2.57-3.815 3.098-8.631 1.393-12.906.001 0-19.778-49.459-19.778-49.459zm-277.397 40.747 12.189-30.466c5.912-14.773 8.915-30.357 8.915-46.294v-89.476c0-61.121 49.716-110.824 110.824-110.824s110.823 49.703 110.823 110.824v89.476c0 15.936 3.003 31.521 8.915 46.294l12.189 30.466z" />
+                <path
+                    d="m26.096 117.344c-17.073 31.981-26.096 68.047-26.096 104.303s9.023 72.322 26.096 104.303l24.432-13.041c-15.138-28.382-22.822-59.091-22.822-91.262 0-32.17 7.684-62.879 22.822-91.262 0 0-24.432-13.041-24.432-13.041z" />
+                <path
+                    d="m417.199 117.344-24.432 13.041c15.138 28.382 22.822 59.091 22.822 91.262 0 32.17-7.684 62.879-22.822 91.262l24.432 13.041c17.073-31.981 26.096-68.047 26.096-104.303 0-36.255-9.023-72.322-26.096-104.303z" />
+            </svg>
+        </div>
+
+        <div class="menu-icon">
+            <svg class="message-icon " version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M256,0C114.848,0,0,114.848,0,256c0,49.216,13.792,96.48,39.936,137.216L1.152,490.048
+			c-2.368,5.952-0.992,12.736,3.552,17.28C7.744,510.368,11.84,512,16,512c2.016,0,4-0.384,5.952-1.152l96.832-38.784
+			C159.52,498.208,206.784,512,256,512c141.152,0,256-114.848,256-256S397.152,0,256,0z M256,480
+			c-45.632,0-89.312-13.504-126.272-39.072c-2.688-1.888-5.888-2.848-9.088-2.848c-2.016,0-4.032,0.384-5.952,1.152l-69.952,28.032
+			l28.032-69.952c1.984-4.992,1.344-10.656-1.696-15.04C45.504,345.312,32,301.632,32,256C32,132.48,132.48,32,256,32
+			s224,100.48,224,224S379.52,480,256,480z" />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M272,288H144c-8.832,0-16,7.168-16,16c0,8.832,7.168,16,16,16h128c8.832,0,16-7.168,16-16
+			C288,295.168,280.832,288,272,288z" />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M368,192H144c-8.832,0-16,7.168-16,16c0,8.832,7.168,16,16,16h224c8.832,0,16-7.168,16-16
+			C384,199.168,376.832,192,368,192z" />
+                    </g>
+                </g>
+
+            </svg>
+        </div>
+
+        <div class="menu-playing-music">
+            <div class="menu-playing-icon">
+                <svg class="previous-song-icon" id="Layer" enable-background="new 0 0 64 64" height="512"
+                    viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m18 54v-44c0-1.104-.896-2-2-2s-2 .896-2 2v44c0 1.104.896 2 2 2s2-.896 2-2z" />
+                    <path
+                        d="m50 51.996v-39.992c0-1.624-.969-3.074-2.469-3.695-1.502-.622-3.212-.281-4.349.856l-20.096 19.788c-.037.037-.073.075-.107.115-1.297 1.495-1.297 3.749 0 5.243.027.032.056.063.086.093l20.107 20.421c.767.767 1.785 1.174 2.824 1.174.516 0 1.037-.101 1.535-.307 1.5-.622 2.469-2.072 2.469-3.696zm-23.993-20.306 19.992-19.706s.001.006.001.019l.011 40.003z" />
+                </svg>
+            </div>
+
+            <div class="menu-playing-icon">
+                <svg class="stop-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 235.592 235.592"
+                    style="enable-background:new 0 0 235.592 235.592;" xml:space="preserve">
+                    <g>
+                        <path d="M117.795,0.002C52.843,0.002,0,52.844,0,117.795C0,182.747,52.843,235.59,117.795,235.59
+		c64.953,0,117.797-52.843,117.797-117.795C235.592,52.844,182.748,0.002,117.795,0.002z M117.795,220.59
+		C61.113,220.59,15,174.477,15,117.795C15,61.114,61.113,15.002,117.795,15.002c56.683,0,102.797,46.112,102.797,102.793
+		C220.592,174.477,174.477,220.59,117.795,220.59z" />
+                        <path d="M139.834,68.258c-4.143,0-7.5,3.357-7.5,7.5v84.076c0,4.143,3.357,7.5,7.5,7.5s7.5-3.357,7.5-7.5V75.758
+		C147.334,71.615,143.977,68.258,139.834,68.258z" />
+                        <path d="M95.758,68.258c-4.143,0-7.5,3.357-7.5,7.5v84.076c0,4.143,3.357,7.5,7.5,7.5s7.5-3.357,7.5-7.5V75.758
+		C103.258,71.615,99.9,68.258,95.758,68.258z" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="menu-playing-icon">
+                <svg class="next-song-icon" id="Layer" enable-background="new 0 0 64 64" height="512"
+                    viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m50 54v-44c0-1.104-.896-2-2-2s-2 .896-2 2v44c0 1.104.896 2 2 2s2-.896 2-2z" />
+                    <path
+                        d="m18.001 55.998c1.041 0 2.063-.409 2.838-1.184l20.097-20.41c.03-.03.059-.061.086-.093 1.297-1.495 1.297-3.749 0-5.243-.034-.04-.07-.078-.107-.115l-20.087-19.777c-1.146-1.147-2.856-1.488-4.359-.867-1.5.621-2.469 2.071-2.469 3.695v39.992c0 1.624.969 3.074 2.469 3.695.497.206 1.017.307 1.532.307zm-.001-43.994 19.993 19.686-19.993 20.306z" />
+                </svg>
+            </div>
+
+            <img class="playing-song-img"
+                src="https://i.pinimg.com/originals/46/a3/49/46a3490b21fa9d1bbb9746e0d4ffce79.jpg" alt="">
+
+            <div class="playing-song-info">
+                <p class="playing-song-name">High by the beach</p>
+                <p class="playing-singer">Lana Dey Rey</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <section class="container">
+        <!-- list -->
+        <section class="message-list-sidebar">
+            <div class="inbox-top-intro">
+                <div class="chat-intro">
+                    <img class="ava-img"
+                        src="https://vignette.wikia.nocookie.net/disney/images/5/5d/Profile_-_Piglet.png/revision/latest?cb=20190424074931"
+                        alt="">
+                    <p class="chat-text">Chat</p>
+                    <p class="inbox-number">5 messages</p>
+                </div>
+
+                <input id="inboxSearch" class="inbox-search-bar" type="text" placeholder="Search">
+            </div>
+
+            <section class="messages-list" id="inboxList">
+                <div class="inbox" class="people">
+                    <img class="person-ava-img"
+                        src="https://www.pngitem.com/pimgs/m/515-5151208_powerpuffgirls-bubbles-powerpuff-girls-bubbles-hd-png-download.png"
+                        alt="">
+                    <div class="personal-inbox-info">
+                        <div class="person-and-message">
+                            <p class="person-user-name">tplinh</p>
+                            <p class="message"> blebleblebleble</p>
+                        </div>
+
+                        <p class="message-time">14:06</p>
+
+                    </div>
+                </div>
+
+                <div class="inbox" class="people">
+                    <img class="person-ava-img"
+                        src="https://i.pinimg.com/originals/85/11/6f/85116ff6090e8956e9b5655027dae545.jpg" alt="">
+                    <div class="personal-inbox-info">
+                        <div class="person-and-message">
+                            <p class="person-user-name">khnhlinhng</p>
+                            <p class="message lastMessage"> blebleblebleble</p>
+                        </div>
+
+                        <p class="message-time">14:07</p>
+
+                    </div>
+                </div>
+
+                <div class="inbox" class="people">
+                    <img class="person-ava-img" src="https://am22.mediaite.com/tms/cnt/uploads/2019/12/olaf-frozen.jpg"
+                        alt="">
+                    <div class="personal-inbox-info">
+                        <div class="person-and-message">
+                            <p class="person-user-name">ngtllll </p>
+                            <p class="message"> blebleblebleble</p>
+                        </div>
+
+                        <p class="message-time">14:08</p>
+
+                    </div>
+                </div>
+
+                <div class="inbox chatting-person-active" class="people">
+                    <img class="person-ava-img"
+                        src="https://i.pinimg.com/originals/4a/d0/1d/4ad01dec05b1f592066e9d78b9fc6762.jpg" alt="">
+                    <div class="personal-inbox-info">
+                        <div class="person-and-message">
+                            <p class="person-user-name">pnpuynn</p>
+                            <p class="message"> blebleblebleble</p>
+                        </div>
+
+                        <p class="message-time">14:09</p>
+
+                    </div>
+                </div>
+
+                <div class="inbox" class="people">
+                    <img class="person-ava-img"
+                        src="https://vignette.wikia.nocookie.net/phineasandferb/images/c/ca/Profile_-_Ferb_Fletcher.PNG/revision/latest/top-crop/width/360/height/360?cb=20200401182236"
+                        alt="">
+                    <div class="personal-inbox-info">
+                        <div class="person-and-message">
+                            <p class="person-user-name">viethhung</p>
+                            <p class="message"> blebleblebleble</p>
+                        </div>
+
+                        <p class="message-time">14:09</p>
+
+                    </div>
+                </div>
+
+
+            </section>
+
+        </section>
+
+
+
+        <!-- content -->
+        <section class="content">
+
+            <!-- chat content -->
+            <section class="conversation">
+                <div class="person-chatting-topbar">
+                    <img class="person-chatting-ava-img"
+                        src="https://i.pinimg.com/originals/4a/d0/1d/4ad01dec05b1f592066e9d78b9fc6762.jpg" alt="">
+                    <div class="person-name-active">
+                        <p class="person-chatting-name">pnpuynn</p>
+                        <p class="active">online</p>
+                    </div>
+
+                    <div class="call-icons">
+
+                    </div>
+                </div>
+
+                <div class="conversation-content">
+                    <div class="person-a">
+                        <!-- <img class="person-a-ava-img" src="https://i.pinimg.com/originals/4a/d0/1d/4ad01dec05b1f592066e9d78b9fc6762.jpg" alt=""> -->
+                        <p class="person-a-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+
+                    <div class="person-b">
+                        <p class="person-b-text"> Lorem ipsum dolor sit amet</p>
+                    </div>
+
+                    <div class="person-a">
+                        <p class="person-a-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+
+                    <div class="person-b">
+                        <p class="person-b-text"> Lorem ipsum dolor sit amet</p>
+                        <p class="person-b-text"> Lorem ipsum dolor sit amet</p>
+                        <p class="person-b-text"> Lorem ipsum dolor sit amet</p>
+                    </div>
+
+                    <div class="person-a combo-img-message-by-a">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81PePZ7hicL._AC_SY355_.jpg" alt="">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81PePZ7hicL._AC_SY355_.jpg" alt="">
+                    </div>
+
+
+                    <div class="person-b combo-img-message-by-b">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81PePZ7hicL._AC_SY355_.jpg" alt="">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81PePZ7hicL._AC_SY355_.jpg" alt="">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81PePZ7hicL._AC_SY355_.jpg" alt="">
+                    </div>
+
+                    <div class="person-a">
+                        <p class="person-a-text"> Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+
+                <section class="type-bar">
+                    <svg class="add-items-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.853,256-256S397.167,0,256,0z M256,472.341
+			c-119.275,0-216.341-97.046-216.341-216.341S136.725,39.659,256,39.659S472.341,136.705,472.341,256S375.295,472.341,256,472.341z
+			" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M355.148,234.386H275.83v-79.318c0-10.946-8.864-19.83-19.83-19.83s-19.83,8.884-19.83,19.83v79.318h-79.318
+			c-10.966,0-19.83,8.884-19.83,19.83s8.864,19.83,19.83,19.83h79.318v79.318c0,10.946,8.864,19.83,19.83,19.83
+			s19.83-8.884,19.83-19.83v-79.318h79.318c10.966,0,19.83-8.884,19.83-19.83S366.114,234.386,355.148,234.386z" />
+                            </g>
+                        </g>
+                    </svg>
+                    
+                    <input id="chatInput" class="type-message-bar" type="text">
+                    
+                    <svg  id="inputButton" class="send-button" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M481.508,210.335L68.414,38.926c-17.403-7.222-37.063-4.045-51.309,8.287C2.859,59.547-3.099,78.55,1.557,96.808
+			L42.151,256L1.557,415.192c-4.656,18.258,1.301,37.261,15.547,49.595c14.273,12.358,33.938,15.495,51.31,8.287l413.094-171.409
+			C500.316,293.861,512,276.363,512,256C512,235.637,500.316,218.139,481.508,210.335z M470.009,273.955L56.916,445.364
+			c-6.947,2.881-14.488,1.665-20.175-3.259c-5.686-4.923-7.971-12.212-6.113-19.501L69.287,271h149.065
+			c8.285,0,15.001-6.716,15.001-15.001c0-8.285-6.716-15.001-15.001-15.001H69.288L30.628,89.396
+			c-1.858-7.288,0.427-14.578,6.113-19.501c5.686-4.923,13.225-6.141,20.174-3.259l413.094,171.409
+			c11.125,4.616,11.99,14.91,11.99,17.955S481.134,269.339,470.009,273.955z" />
+                            </g>
+                        </g>
+                    </svg>
+                </section>
+            </section>
+
+            <section class="person-profile-bar">
+
+                <section class="top-profile-set">
+                    <img class="person-profile-ava-img"
+                        src="https://i.pinimg.com/originals/4a/d0/1d/4ad01dec05b1f592066e9d78b9fc6762.jpg" alt="">
+                    <p class="person-name-user">pnpuynn</p>
+                    <p class="person-real-name">Pham Ngoc Phuong Uyen</p>
+                </section>
+
+
+                <!-- <a href="#" class="go-to-person-profile-button">
+                    <p>View profile</p>
+                </a> -->
+
+
+                <!-- playlist -->
+
+                <section class="person-profile-playlist">
+
+                    <div class="person-playlist-top-content">
+
+                        <p class="person-playlist-text"> pnpuynn's playlist</p>
+                        <div class="see-all-person-playlist">
+                            <p class="see-all-person-playlist-text">See all </p>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330"
+                                style="enable-background:new 0 0 330 330;" xml:space="preserve">
+                                <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+	c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+	C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+	C255,161.018,253.42,157.202,250.606,154.389z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="person-profile-playlist-content">
+                        <img class="person-playlist-img-cover"
+                            src="https://i.pinimg.com/originals/88/c5/71/88c571552cd81da02a2a7db1c0460b82.jpg" alt="">
+
+
+                        <div class="person-playlitst-song-content">
+
+                            <div class="person-playlist-name">Joy</div>
+
+                            <div class="person-playlist-songs">
+                                <div class="person-playlist-one-song">
+                                    <img class="person-playlist-song-img"
+                                        src="https://thebiaslistcom.files.wordpress.com/2020/07/lee-hi-holo.jpg?w=640"
+                                        alt="">
+                                    <p class="person-playlist-song-name">Holo</p>
+                                    <p class="person-playlist-artist">Lee Hi</p>
+
+                                </div>
+
+                                <div class="person-playlist-one-song">
+                                    <img class="person-playlist-song-img"
+                                        src="https://thebiaslistcom.files.wordpress.com/2020/07/lee-hi-holo.jpg?w=640"
+                                        alt="">
+                                    <p class="person-playlist-song-name">Holo</p>
+                                    <p class="person-playlist-artist">Lee Hi</p>
+
+                                </div>
+
+                                <div class="person-playlist-one-song">
+                                    <img class="person-playlist-song-img"
+                                        src="https://thebiaslistcom.files.wordpress.com/2020/07/lee-hi-holo.jpg?w=640"
+                                        alt="">
+                                    <p class="person-playlist-song-name">Holo</p>
+                                    <p class="person-playlist-artist">Lee Hi</p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </section>
+
+                <section class="person-photos">
+
+                    <div class="person-photo-top-content">
+                        <p class="person-photo-text"> pnpuynn's photos</p>
+                        <div class="see-all-person-photo">
+                            <p class="see-all-person-photo-text">See all </p>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330"
+                                style="enable-background:new 0 0 330 330;" xml:space="preserve">
+                                <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+        c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+        C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+        C255,161.018,253.42,157.202,250.606,154.389z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="person-photo-content">
+                        <div class="person-three-photos">
+                            <img src="https://lazi.vn/uploads/users/avatar/338733_1582769548.jpg" alt="">
+                            <img src="https://lazi.vn/uploads/users/avatar/338733_1582769548.jpg" alt="">
+                            <img src="https://lazi.vn/uploads/users/avatar/338733_1582769548.jpg" alt="">
+                        </div>
+
+                        <div class="person-three-photos">
+                            <img src="https://lazi.vn/uploads/users/avatar/338733_1582769548.jpg" alt="">
+                            <img src="https://lazi.vn/uploads/users/avatar/338733_1582769548.jpg" alt="">
+                            <img src="https://lazi.vn/uploads/users/avatar/338733_1582769548.jpg" alt="">
+                        </div>
+                    </div>
+
+                </section>
+
+            </section>
+        </section>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script src="./chat.js"></script>
+    
+</body>
+
+</html>

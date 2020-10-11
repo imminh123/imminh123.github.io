@@ -1,0 +1,275 @@
+.bodyPage {
+	background-color: rgba(177, 0, 0, 0.384);
+	background-image: url("ảnh/7.webp");
+	background-size: cover;
+	background-blend-mode: multiply;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.body {
+	display: flex;
+	margin-top: 55px;
+	flex-direction: column;
+	height: 500px;
+	width: 500px;
+	border-radius: 20px;
+	background-color: #0000006b;
+	background-blend-mode: screen;
+	text-align: center;
+	align-items: center;
+}
+
+#chữ {
+	color: seashell;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	font-family: "Trebuchet MS", sans-serif;
+	font-weight: bolder;
+	font-size: 60px;
+	text-shadow: 3px 2px #df4949;
+}
+
+#chữ2 {
+	margin-top: 15px;
+	color: white;
+	font-size: 10px;
+	font-family: "Nunito", sans-serif;
+	text-decoration: underline;
+}
+
+#chữ3 {
+	margin-top: 15px;
+	color: white;
+	font-size: 10px;
+	font-family: "Nunito", sans-serif;
+	text-decoration: underline;
+}
+
+.buttonĐN {
+	position: relative;
+	overflow: hidden;
+	font-family: "Nunito", sans-serif;
+	color: white;
+	height: 50px;
+	width: 300px;
+	border-radius: 25px;
+	border-color: #ffffff;
+	border-width: 1px;
+	background-color: rgba(0, 0, 0, 0.205);
+}
+.buttonĐN:after {
+	content: "";
+	background: #d3d3d3;
+	display: flex;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	left: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: all 0.8s;
+}
+.buttonĐN:active:after {
+	padding: 0;
+	opacity: 1;
+	transition: 0s;
+}
+
+.buttonĐK {
+	position: relative;
+	overflow: hidden;
+	margin-top: 10px;
+	font-family: "Nunito", sans-serif;
+	color: white;
+	height: 50px;
+	width: 300px;
+	border-radius: 25px;
+	border-color: #ffffff;
+	border-width: 1px;
+	background-color: rgba(255, 255, 255, 0.205);
+}
+
+.buttonĐK:after {
+	content: "";
+	background: #1b1b1b;
+	display: flex;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	left: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: all 0.8s;
+}
+
+*:focus {
+	outline: 0 !important;
+}
+.buttonĐK:active:after {
+	padding: 0;
+	opacity: 1;
+	transition: 0s;
+}
+
+.modal-header {
+	background-color: #ffffff;
+	background-blend-mode: multiply;
+	height: 50px;
+	color: #1d2129;
+	display: flex;
+}
+
+.modal-body {
+	font-family: "Nunito", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	background-color: #ffffff;
+	color: #1d2129;
+}
+.modal-body h3 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #1f0c31;
+}
+.information {
+	display: flex;
+	padding-top: 15px;
+	justify-content: space-around;
+	font-family: "Nunito", sans-serif;
+	text-decoration-color: #1d2129;
+}
+
+.information input {
+	width: 85%;
+	height: 35px;
+	display: flex;
+	padding-left: 20px;
+	border-color: #5c414452;
+	border-radius: 20px;
+	border-width: 1px;
+}
+
+.information div {
+	width: 200px;
+	padding-right: 20px;
+}
+
+#btn_Đk {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+#btn_Đk_chữ {
+	background-color: limegreen;
+	border-radius: 30px;
+	width: 150px;
+	height: 35px;
+	border-color: rgba(238, 232, 170, 0);
+	color: #ffffff;
+}
+
+#name {
+	text-transform: capitalize;
+}
+
+#dt {
+	text-indent: -500px;
+	height: 25px;
+	width: 200px;
+}
+
+#sex {
+	display: flex;
+	flex-flow: row;
+}
+
+#sex input {
+	display: flex;
+	block-size: 20px;
+}
+
+#sexx {
+	display: flex;
+	padding-bottom: 15px;
+}
+
+.điều_khoản {
+	text-align: left;
+	padding-left: 20px;
+	font-family: "Nunito", sans-serif;
+}
+
+#btn_Đn_chữ {
+	background-color: #e43140;
+	border-radius: 30px;
+	width: 150px;
+	height: 35px;
+	border-color: rgba(238, 232, 170, 0);
+	color: #ffffff;
+}
+
+.infor_content {
+	display: flex;
+	text-align-last: left;
+	-webkit-padding-start: 15px;
+}
+
+.modal {
+	background-image: url(ảnh/8.webp);
+	background-size: cover;
+}
+
+#iMG {
+	display: flex;
+	flex-direction:row ;
+	padding-top: 25px;
+}
+
+#img1 {
+	height: 150px;
+	width: 150px;
+	display: flex;
+	padding-right: 30px;
+	background-color:rgba(63, 63, 63, 0);
+	background-size: cover;
+	background-image: url(ảnh/boy.svg);
+	background-blend-mode: multiply;
+	border-color: #ffffff00;
+	border-radius: 50px;
+}
+
+#img2 {
+	height: 150px;
+	width: 150px;
+	display: flex;
+	padding-left: 30px;
+	background-color: rgba(63, 63, 63, 0);
+	background-image: url(ảnh/girl\ .svg);
+	background-blend-mode: multiply;
+	background-size: cover;
+	border-color: #ffffff00;
+	border-radius: 50px;
+}
+
+span {
+	color: red;
+}
+
+.hide {
+	display: none;
+}
+
+.errorText {
+	text-align: right;
+	margin-bottom: 0px;
+	margin-right: 15px;
+	font-weight: bold ;
+	font-style: italic;
+	color: red;
+}
+

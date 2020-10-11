@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+<style>
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 43px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #68262f54;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100%;
+}
+#myBtn:hover {
+  background-color: #68262f;
+}
+</style>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="aboutme.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,800;0,900;1,300;1,400;1,600;1,800;1,900&display=swap" rel="stylesheet">
+	</head>
+	<body id="body">
+
+			<ul id="menu_button">
+				<div>
+						<a  class="button" href="#intro">GIỚI THIỆU</a>
+				</div>
+				<div>
+						<a  class="button" href="">QUÁ TRÌNH PHÁT TRIỂN</a>
+				</div>
+				<div>
+						<a  class="button" href="#thanhvien">THÀNH VIÊN</a>
+				</div>
+				<div>
+					<a  class="button" href="#contact">TƯƠNG TÁC VỚI CHÚNG TÔI</a>
+			</div>
+			</ul>
+		<!-- <p><a href="#top">Top</a></p> -->
+
+		<!-- banner -->
+		<div>
+			<div id="divbanner">
+			<img  id="banner" src="ảnh/Tổng-hợp-hình-ảnh-bình-minh-sớm-mai-đẹp-nhất-47.jpg" alt="">
+			</div>
+		</div>
+
+		<!-- Giới thiệu -->
+		<div id="intro" >
+			<div>
+				<p class="header_2">Giới Thiệu</p>
+			</div>
+			<div class="intro_content_1" >
+				<div class="intro_text1"> 
+					<h2>Tại sao lại là Musitch?</h2>
+				</div>
+				<div class="intro_text2">
+						<p >Musitch là một trang nền tảng web của Việt Nam, do một đội ngũ các bạn trẻ phát triển. Musitch được lấy ý tưởng từ các phần mền tinder, nhằm mục đích mở ra sân chơi lành mạnh dành cho các bạn trẻ có niềm đam mê với âm nhạc, muốn tìm một người bạn đồng hành cùng bản thân, hoặc đơn giản là có những phút giây thư giãn.  </p>
+				</div>
+			</div>
+			<div class="intro_content_1" >
+				<div class="intro_text1"> 
+					<h2>Bí mật của cái tên</h2>
+				</div>
+				<div class="intro_text2">
+					<p >Musitch là sự kết hợp hoàn hảo giữa hai từ Music và Match, đây cũng là điều mà chúng tôi muốn mang lại cho bạn, âm nhạc và kết nối. Hãy để Musitch làm cây cầu nối giữa tình yêu và bạn bè, tin tưởng chúng tôi sẽ không bao giờ làm bạn thất vọng! </p>
+				</div>
+			</div>	
+			<div class="intro_content_1" >
+				<div class="intro_text1"> 
+					<h2>Musitch là một trang web phi lợi nhuận</h2>
+				</div>
+				<div class="intro_text2">
+					<p >Muc đích phát triển và hướng tới của Musitch là thành lập một sân chơi lành mạnh, giải trí, phù hợp với hầu hết các lứa tuổi. Hãy tận hưởng những phút giây vui vẻ và chúc bạn tìm được thật nhiều niềm vui mới tại đây. </p>
+				</div>
+			</div>	
+		</div>
+
+
+
+		<!-- quá trình phát triển -->
+
+		<!-- giới thiệu nhân vật -->
+		<div id="thanhvien" id="Thành_viên">
+			<div class="header_2">Thành Viên</div>
+			<div class="intro_content_1" >
+				<h2 class="intro_text1">Các thành viên nữ của chúng tôi</h2>
+				<p class="intro_text2">Những cô gái của Musitch, họ luôn hoàn thành tốt công việc được giao đúng thời hạn. Hãy xem những cô gái đó là ai nhé!</p>
+			</div>
+			<!-- thành viên số 1 -->
+			<div class="human1">
+				<div>
+					<img class="img_tv" src="ảnh/thiên hương.jpg" alt="" />
+				</div>
+				<div class="text">
+					<p class="header_human">Thông tin cơ bản:</p>
+					<p>Tên: Vũ Thị Thiên Hương</p>
+					<p>Giới tính: Nữ</p>
+					<p>Năm sinh: 15/01/2004</p>
+					<p>Giới thiệu: Mình biết đến hệ thống giáo dục MindX qua sự giới thiệu của chị gái. Đối với mình, MindX là một trung tâm dạy công nghệ vô cùng đáng tin cậy, cơ sở vật chất hiên đại và thoải mái, giảng viên nhiệt tình, dễ thương. Nói đến Musitch, với sở trường của mình về mỹ thuật hội họa, công việc được giao của mình là thiết kế một số mặt tiền của trang web, một công việc vô cùng quan trọng và đòi hỏi phải xong deadline sớm để tiếp tục những công việc dang dở còn lại.</p>
+					<p></p>
+				</div>
+			</div>
+
+			<!-- thành viên số 2 -->
+			<div class="human2">
+				<div>
+					<img class="img_tv" src="ảnh/chị My.jpg" alt="" />
+				</div>
+				<div class="  pic-left">
+					<p class="header_human">Thông tin cơ bản:</p>
+					<p>Tên: Nguyễn Trần Hà My</p>
+					<p>Giới tính: Nữ</p>
+					<p>Năm sinh: 23/10/2002</p>
+					<p>Giới thiệu: Thích mèo thích ăn thích ngủ thích đi chơi</p>		
+				</div>
+			</div>
+<!-- ////// -->
+			<div class="intro_content_1" >
+				<h2 class="intro_text1">Các thành viên nam của chúng tôi</h2>
+				<p class="intro_text2_2">Về phia các thành viên nam cũng không hề kém cạnh, họ sở hữu sự ga-lăng và rất biết cách làm bầu không khí trở nên sôi động hơn, hãy điểm qua những gương mặt này nhé!
+			</div>
+<!-- ////// -->
+				<!-- thành viên số 3 -->
+				<div class="human">
+					<div>
+						<img class="img_tv" src="ảnh/thiên hương.jpg" alt="" />
+					</div>
+					<div class="text">
+						<p class="header_human">Thông tin cơ bản:</p>
+						<p>Tên: Phạm Quý Dương</p>
+						<p>Giới tính: Nam</p>
+						<p>Năm sinh: 16/01/2004</p>
+						<p>Giới thiệu: Thích động vật nuôi, đánh cờ chơi game và  đi ăn</p>
+						<p></p>
+					</div>
+				</div>
+
+			<!-- thành viên số 4 -->
+			<div class="human2">
+				<div>
+					<img class="img_tv" src="https://www.lovearoma.co.uk/blog/wp-content/uploads/2015/05/bg-red-carpet.jpg" alt="" />
+				</div>
+				<div class="  pic-left">
+					<p class="header_human">Thông tin cơ bản:</p>
+					<p>Tên: Nguyễn Hà Huy Hoàng</p>
+					<p>Giới tính: Nam</p>
+					<p>Năm sinh: 21/2/2003</p>
+					<p>Giới thiệu: Thích chơi game đọc truyện xem phim</p>
+					<p></p>
+				</div>
+			</div>
+
+			<!-- <p><a href="#top">Top</a></p> -->
+		</div>
+
+		<!-- tương tác -->
+		<div id="contact">
+			<div class="header_3">
+			<p>Gửi hòm thư góp ý cho Musitch.</p>
+			</div>
+			<div class="contact_text">
+				<p>Ý kiến của các bạn có thể giúp Musitch hoàn thiện hơn, hãy để lại email để chúng tôi có thể liên hệ lại với bạn. </p>
+			</div>
+			<div>
+				<input id="contact_email" type="email" name="contact[email]" placeholder="Nhập email của bạn" autocorrect="on" autocomplete="email">
+				<button id="contact_email_btn" >Liên hệ lại với tôi</button>
+			</div>
+			<div class="contact_text_2" >
+				<p class="contact_text2">Email của chúng tôi: Musitch@gmai.com</p>
+				<p class="contact_text2">Số điện thoại: xxxxxxxxxxxxxx</p>
+			</div>
+		</div>
+
+
+
+
+		<script type=”text/javascript” src=”path/…./jquery-latest.js”></script>
+		<script type=”text/javascript” src=”http://code.jquery.com/jquery-2.0.3.min.js”></script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

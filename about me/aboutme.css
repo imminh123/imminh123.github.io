@@ -1,0 +1,256 @@
+#body {
+  background-color: #68262f17;
+}
+
+#menu_button {
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.button {
+  border-color: rgba(165, 42, 42, 0);
+  font-family: "Nunito", sans-serif;
+  color: rgb(165, 42, 42);
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+/* #divbanner {
+	display: flex;
+	margin-bottom: 500px;
+} */
+
+#banner {
+  width: 100%;
+  image-rendering: pixelated;
+  clip-path:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L60,133.3C120,107,240,53,360,32C480,11,600,21,720,58.7C840,96,960,160,1080,186.7C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>';
+  clip-path: ellipse(100% 44% at 70% 29%);
+  animation: cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation-name: wave;
+  animation-duration: 5s;
+  animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes wave {
+  from {
+    clip-path: polygon(
+      0 94%,
+      7% 91%,
+      16% 87%,
+      25% 87%,
+      33% 88%,
+      42% 90%,
+      51% 93%,
+      60% 95%,
+      70% 96%,
+      79% 95%,
+      88% 92%,
+      94% 89%,
+      100% 86%,
+      100% 0,
+      0 0
+    );
+  }
+  to {
+    clip-path: polygon(
+      0% 90%,
+      8% 93%,
+      17% 94%,
+      25% 92%,
+      34% 89%,
+      43% 88%,
+      52% 88%,
+      61% 89%,
+      70% 91%,
+      79% 93%,
+      88% 96%,
+      96% 97%,
+      100% 96%,
+      100% 0,
+      0 0
+    );
+  }
+  /* animation-direction: alternate; */
+}
+
+.slice_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.header_2 {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  padding-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 800;
+  color: #68262f;
+}
+
+#mycarousel {
+  width: 1000px;
+  height: 100%;
+  justify-items: center;
+}
+
+.img_tv {
+  height: 400px;
+  width: 400px;
+  border-radius: 100px;
+  display: flex;
+}
+
+.human1 {
+  display: flex;
+  flex-direction: row;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.human {
+	display: flex;
+	flex-direction: row;
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-top: 50px;
+}
+
+.human2 {
+	display: flex;
+	flex-direction: row-reverse;
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.header_human {
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: "Nunito", sans-serif;
+}
+
+.text {
+  /* padding-right: 170px; */
+  padding-left: 100px;
+}
+
+.pic-left{
+	padding-right: 100px;
+
+}
+
+#Thành_viên {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+#contact {
+  background-color: #68262f;
+  color: white;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-left: 50px;
+  font-family: Galano Grotesque, sans-serif;
+}
+
+.header_3 {
+  display: flex;
+  padding-top: 50px;
+  font-size: 2.0rem;
+  padding-bottom: 0;
+  font-weight: 600;
+}
+
+.contact_text {
+  /* padding-top: 10px; */
+  padding-bottom: 10px;
+  width: 40%;
+  font-size: 18px;
+}
+
+.contact_text_2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact_text2 {
+  width: 40%;
+  font-size: 15px;
+  margin-bottom: 1;
+}
+
+#contact_email {
+  height: 40px;
+  width: 30%;
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0);
+  padding-left: 20px;
+}
+
+#contact_email_btn {
+  color: #68262f;
+  height: 40px;
+  border-radius: 20px;
+  width: 150px;
+  background-color: antiquewhite;
+  border-color: transparent;
+}
+
+.intro_content_1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+	text-align: center;
+
+}
+
+.intro_text1 {
+	width: 30%;
+	color: #0e2d68;
+
+}
+
+.intro_text2 {
+	width: 50%;
+	color: #0e2e68da;	
+	padding-bottom: 50px;
+}
+
+.intro_text2_2 {
+	width: 50%;
+	color: #0e2e68da;	
+}
+
+/* scroll ball */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

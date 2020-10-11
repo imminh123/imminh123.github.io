@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="login.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body class="bodyPage">
+		<div class="body">
+			<p id="chữ">Musitch</p>
+			<button
+				style="cursor: pointer"
+				class="buttonĐN"
+				class="btn btn-primary"
+				data-toggle="modal"
+				data-target="#myModal_login"
+			>
+				Log in
+			</button>
+
+			<div class="modal fade" id="myModal_login" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+								&times;
+							</button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<div class="modal-body">
+							<h3 class="modal-body-text">Log in</h3>
+
+							<div class="information">
+								<div class="infor_content">Email:</div>
+								<input
+									id="email"
+									type="email"
+									placeholder="Enter your email address"
+								/>
+							</div>
+
+							<div class="information">
+								<div class="infor_content">Password:</div>
+								<input id="pass" type="password" placeholder="Enter your password" />
+							</div>
+
+							<div id="btn_Đk">
+								<button id="btn_Đn_chữ">Log in</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////// -->
+
+			<button
+				style="cursor: pointer"
+				class="buttonĐK"
+				data-toggle="modal"
+				data-target="#myModal"
+			>
+				Sign up
+			</button>
+
+			<!--/////////// -->
+			<a style="cursor: help" id="chữ2" href="">Term of use</a>
+			<!--/////////// -->
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+								&times;
+							</button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<!-- quan trọng!!!!!!!!!!!!!!!!!!!!!! -->
+						<div class="modal-body">
+							<form>
+							<h3 class="modal-body-text">Sign up to Musitch</h3>
+							<div class="information">
+								<div class="infor_content"><span>(*)</span>Full name:</div>
+								<input
+									id="nameInput"
+									type="text"
+									placeholder="Enter your full name"
+									required
+								/>
+							</div>
+
+							<div class="information">
+								<div class="infor_content"><span>(*)</span> Username:</div>
+								<input
+									id="nick_name"
+
+									type="text"
+									placeholder="Username is not over 15 letters"
+									autocomplete="on"
+									required
+								/>
+							</div>
+							<p class="errorText hide" id="errorUsername">Input must be shorter than 15 characters</p>
+
+							<div class="information">
+								<div class="infor_content"><span>(*)</span> Email:</div>
+								<input
+									id="emailInput"
+									type="email"
+									placeholder="Enter your email address"
+									required
+								/> 
+							</div>
+							<p class="errorText hide" id="errorEmail">please input @gmail.com</p>
+							
+							<div class="information">
+								<div class="infor_content">Phone number:</div>
+								<input
+									id="phone_number"
+									type="number"
+									placeholder="Enter your phone number"
+								/>
+							</div>
+
+							<div class="information">
+								<div class="infor_content"><span>(*)</span> Password:</div>
+								<input id="passInput" type="password" placeholder="Password must be over 7 inits" required/>
+							</div>
+                            <p class="errorText hide" id="errorPass">Input must be longer than 7 inits</p>
+
+
+							<div class="information">
+								<div class="infor_content"><span>(*)</span> Confirm password:</div>
+								<input id="passwordInput" type="password" placeholder="Confirm your password" required/>
+							</div>
+							<p class="errorText hide" id="errorPassword">Password is not match</p>
+
+							<div class="information">
+								<div class="infor_content"><span>(*)</span> D.O.B:</div>
+								<input id="birthday" type="date" required/>
+							</div>
+
+							<div id="sexx" class="information">
+								<div class="infor_content"><span>(*)</span> Gender:</div>
+								<div id="sex">
+									<input type="radio" name="gioitinh" required/>Female
+									<input type="radio" name="gioitinh" required/>Male
+									<input type="radio" name="gioitinh" required/>Others
+								</div>
+							</div>
+
+							<div class="điều_khoản">
+								<input type="checkbox" required/> I accept the  <span> <a href="">Term of use </a> </span>
+
+							<div id="btn_Đk">
+								<button  type="submit" id="btn_Đk_chữ">Sign up now</button>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+					<div id="iMG">
+				<button id="img1"></button>
+			<a href="../about me/aboutme.html"><button id="img2"></button></a>	
+			</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"
+		></script>
+		<script src="login.js"></script>
+	</body>
+</html>
