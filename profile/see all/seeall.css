@@ -107,7 +107,9 @@ body {
     margin-top: 11px;
 }
 
-
+.menu-element-icon {
+    display: flex;
+}
 
 .menu-element h3 {
     margin-left: 20px;
@@ -122,14 +124,6 @@ body {
     fill: rgb(153, 152, 152);
 }
 
-.menu-element:hover {
-    background-color: #a93f48;
-    border-radius: 15px;
-    color: white ;
-    box-shadow: -5px -8px 10px rgba(228, 228, 228, 0.495),
-    10px 10px 15px rgba(70, 70, 70, 0.144); 
-    transition: .4s;
-}
 
 .active {
     background-color: #a93f48;
@@ -139,6 +133,10 @@ body {
     10px 10px 15px rgba(70, 70, 70, 0.144);  */
     box-shadow: -5px -8px 10px rgba(228, 228, 228, 0.495),
     10px 10px 15px rgba(70, 70, 70, 0.144); 
+}
+
+.active svg {
+    fill: #ffffff;
 }
 
 .menu-elements-conatainer {

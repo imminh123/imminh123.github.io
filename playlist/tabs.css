@@ -25,7 +25,8 @@ body h1 {
 .tabs {
   width: 900px;
   height: 75px;
-  margin-left: 215px;
+	margin-left: 215px;
+	
 }
 
 .tabs input[name="tab-control"] {

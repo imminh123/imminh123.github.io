@@ -6,17 +6,11 @@
 	margin-left: 225px;
 }
 
-#tabs {
-	margin: 20px;
-	display: flex;
-	width: 900px;
-	margin-bottom: 10px;
+.tabs{
+	margin-top: 300px;
 }
 
-.nav-tabs .nav-link {
-	border-radius: 15px;
-	color: black;
-}
+
 
 #createPlaylist {
 	display: flex;

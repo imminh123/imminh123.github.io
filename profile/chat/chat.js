@@ -209,7 +209,7 @@ renderProfile(inboxList);
 let inbox = $(".inbox");
 console.log(inbox);
 let a = 0;
-for (let i = 0; i < searchArray.length; i++) {
+for (let i = 0; i < inboxList.length; i++) {
 	inbox[i].addEventListener("click", function (e) {
 		renderMusic(chatContent[i]);
 		let personRender1 = "";
@@ -254,6 +254,22 @@ C255,161.018,253.42,157.202,250.606,154.389z" />
 
 $(".person-playlist-top-content").html(personRender3);
 
+let personRender4 = "";
+personRender4 += `<p class="person-photo-text"> ${name}'s photos</p>
+<div class="see-all-person-photo">
+		<p class="see-all-person-photo-text">See all </p>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330"
+				style="enable-background:new 0 0 330 330;" xml:space="preserve">
+				<path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+C255,161.018,253.42,157.202,250.606,154.389z" />
+		</svg>
+</div>`;
+
+$(".person-photo-top-content").html(personRender4);
+
 		return (a = i);
 	});
 
@@ -263,7 +279,7 @@ $(".person-playlist-top-content").html(personRender3);
 		.addEventListener("keypress", function (e) {
 			if (e.key === "Enter") {
 				let inputVal = $("#chatInput").val();
-				
+
 				console.log(inputVal);
 				if (i == a) {
 					chatContent[a].push({
@@ -276,6 +292,7 @@ $(".person-playlist-top-content").html(personRender3);
 					// code for enter
 				}
 			}
+			renderProfile(inboxList);
 		});
 	$("#inputButton").on("click", function (event) {
 		let inputVal = $("#chatInput").val();

@@ -15,10 +15,13 @@
 	height: 500px;
 	width: 500px;
 	border-radius: 20px;
-	background-color: #0000006b;
+	background-color: #00000058;
 	background-blend-mode: screen;
 	text-align: center;
 	align-items: center;
+	/* background-color: #f8f8f890; */
+   /* box-shadow: -10px -10px 19px rgb(255, 255, 255),
+   10px 10px 15px rgba(70, 70, 70, 0.178);  */
 }
 
 #chữ {
@@ -58,6 +61,18 @@
 	border-color: #ffffff;
 	border-width: 1px;
 	background-color: rgba(0, 0, 0, 0.205);
+
+		/* position: relative;
+	overflow: hidden;
+	font-family: "Nunito", sans-serif;
+	color: white;
+	height: 50px;
+	width: 300px;
+	border-color: transparent;
+	outline: none;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.205); */
+
 }
 .buttonĐN:after {
 	content: "";
